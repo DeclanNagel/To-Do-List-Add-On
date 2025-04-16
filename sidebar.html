@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #1B2631;
+      }
+      .task {
+        margin: 5px 0;
+      }
+      .Intro-Title {
+        text-align: center;
+        color: #FDFEFE;
+      }
+      .icons-container {
+        position: absolute;  
+        right: 130px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;  
+      }
+      .add-task-icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        border-radius: 50%;      
+        background-color: #D3D3D3; 
+        border: 2px solid #424242;    
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+      .add-task-icon:hover {
+        background-color: #A9A9A9;
+      }
+      .see-data-icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        border-radius: 50%;      
+        background-color: #D3D3D3; 
+        border: 2px solid #424242;    
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+      .see-data-icon:hover {
+        background-color: #A9A9A9;
+      }
+      .about-icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        border-radius: 50%;      
+        background-color: #D3D3D3; 
+        border: 2px solid #424242;    
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+      .about-icon:hover {
+        background-color: #A9A9A9;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="Intro-Title">My To-Do List</h2>
+    <div class="icons-container">
+      <h3 class="add-task-icon" onclick="openAddTaskPage()">📝</h3>
+      <h3 class="see-data-icon" onclick="openSeeDataPage()">📉</h3>
+      <h3 class="about-icon" onclick="openAboutPage()">❓</h3>
+    </div>
+
+    <script>
+      function openAddTaskPage() {
+        google.script.run.showTaskPage();
+      }
+
+      function openSeeDataPage() {
+        google.script.run.showDataPage();
+      }
+
+      function openAboutPage() {
+        google.script.run.showAboutPage();
+      }
+    </script>
+  </body>
+</html>
